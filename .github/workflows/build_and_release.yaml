@@ -61,8 +61,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
         matrix:
-          # Ubuntu 26.04's static OpenSSL dependencies break bundled libarchive.
-          # Keep the last working Linux baseline until that integration is fixed.
+            os: [ windows-latest]
           os: [ windows-latest, ubuntu-24.04, macOS-latest ]
         fail-fast: false
     steps:
